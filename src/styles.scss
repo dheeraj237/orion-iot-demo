@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+$main-theme: darkly;
+
+@import "~bootswatch/dist/cosmo/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootswatch/dist/cosmo/_bootswatch.scss"
