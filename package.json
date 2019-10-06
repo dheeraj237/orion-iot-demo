@@ -15,6 +15,7 @@
     "@angular/common": "~8.2.0",
     "@angular/compiler": "~8.2.0",
     "@angular/core": "~8.2.0",
+    "@angular/fire": "^5.2.1",
     "@angular/forms": "~8.2.0",
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
@@ -23,6 +24,7 @@
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
     "child_process": "^1.0.2",
+    "firebase": "^7.1.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "marked": "^0.7.0",
@@ -30,6 +32,7 @@
     "rxjs": "~6.4.0",
     "sync-exec": "^0.6.2",
     "tslib": "^1.10.0",
+    "uuid": "^3.3.3",
     "wifi-control": "^2.0.1",
     "zone.js": "~0.9.1"
   },

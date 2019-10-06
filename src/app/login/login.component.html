@@ -1,0 +1,12 @@
+<div class="container mt-2">
+  <h1 class="display-3">Login</h1>
+  <hr class="my-4">
+  <div class="form-group">
+    <button class="btn btn-danger mr-3" (click)="auth.googleSignIn()">
+      <i class="fa fa-google p-2" aria-hidden="true"></i> Login with Google
+    </button>
+    <button class="btn btn-primary mr-3" (click)="auth.githubSignIn()">
+      <i class="fa fa-github p-2" aria-hidden="true"></i> Login with Github
+    </button>
+  </div>
+</div>
