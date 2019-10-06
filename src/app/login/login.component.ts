@@ -11,7 +11,7 @@ import { AuthService } from '../core/services/auth.service'
 export class LoginComponent implements OnInit {
 
   constructor(
-    private auth: AuthService
+    public auth: AuthService
   ) { }
 
   ngOnInit() {

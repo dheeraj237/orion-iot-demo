@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/auth';
-
 import { AuthService } from './core/services/auth.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { AuthService } from './core/services/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'iotclient';
+  title = 'IoT Client';
 
   constructor(
     public afAuth: AngularFireAuth,

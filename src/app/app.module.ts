@@ -23,6 +23,10 @@ import { AutoconnectComponent } from './home/help/autoconnect/autoconnect.compon
 import { MarkdownDirective } from './core/diretives/markdown.directive';
 import { ToastComponent } from './core/components/toast/toast.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { TimeagoModule } from 'ngx-timeago';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ import { LoginComponent } from './login/login.component';
     NgbModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+    TimeagoModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

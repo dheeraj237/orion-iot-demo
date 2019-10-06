@@ -1,1 +1,12 @@
-<p>list works!</p>
+
+<div class="container mt-3">
+    <div class="card mb-3" *ngFor="let device of devices">
+    <div class="card-body">
+        <h5 class="card-title">deviceid : {{device.deviceid}}</h5>
+        <p class="card-text">LoadScale : {{device.loadscale}}</p>
+        <p class="card-text"><code>{{device | json}}</code></p>
+        <p class="card-text"><small class="text-muted">Last updated {{device.timestamp | timeago}}</small></p>
+    </div>
+    </div>
+
+</div>
