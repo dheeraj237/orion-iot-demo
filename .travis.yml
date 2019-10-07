@@ -17,3 +17,8 @@ script:
   - npm run test:headless
   - npm run build
   - xvfb-run npm run e2e
+ 
+ notifications:
+  email:
+    - dheerusuthar@gmail.com
+    - bhaskar.suthar@gmail.com
