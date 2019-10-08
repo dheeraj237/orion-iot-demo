@@ -12,7 +12,7 @@ describe('workspace-project App', () => {
   //   page.navigateTo();
   //   console.log('page.getTitleText()>>>>>>>>>>>', page.getTitleText())
   //   expect(page.getTitleText()).toEqual('IoT Client App');
-  // });:TODO: complete this 
+  // });:TODO: complete this
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
