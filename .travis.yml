@@ -17,7 +17,7 @@ script:
   - npm run build
   - xvfb-run npm run e2e
  
- notifications:
+notifications:
   email:
     - dheerusuthar@gmail.com
     - bhaskar.suthar@gmail.com
