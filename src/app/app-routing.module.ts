@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//Components
+// Components
 import { HomeComponent } from './home/home.component';
 import { AutoconnectComponent } from './home/help/autoconnect/autoconnect.component';
 import { LoginComponent } from './login/login.component';
-import { ListComponent } from './devices/list/list.component'
-import { DiscoverComponent } from './devices/discover/discover.component'
+import { ListComponent } from './devices/list/list.component';
+import { DiscoverComponent } from './devices/discover/discover.component';
 
 
 import { AuthGuard } from './core/services/auth.guard';
@@ -24,4 +24,5 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

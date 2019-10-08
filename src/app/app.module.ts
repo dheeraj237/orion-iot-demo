@@ -20,7 +20,6 @@ import { ListComponent } from './devices/list/list.component';
 import { ConnectedComponent } from './devices/connected/connected.component';
 import { DiscoverComponent } from './devices/discover/discover.component';
 import { AutoconnectComponent } from './home/help/autoconnect/autoconnect.component';
-import { MarkdownDirective } from './core/diretives/markdown.directive';
 import { ToastComponent } from './core/components/toast/toast.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -39,7 +38,6 @@ import { NgProgressRouterModule } from '@ngx-progressbar/router';
     ConnectedComponent,
     DiscoverComponent,
     AutoconnectComponent,
-    MarkdownDirective,
     ToastComponent,
     LoginComponent,
 

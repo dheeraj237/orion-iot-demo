@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, HostBinding } from '@angular/core';
 
 import { ToastService } from '../toast.service';
 
@@ -18,7 +18,7 @@ import { ToastService } from '../toast.service';
 
       <ng-template #text class="toast-container">
       <span>{{ toast.textOrTpl }}</span>
-      <span (click)="toastService.remove(toast)"><i class="link fa fa-close" aria-hidden="true"></i></span></ng-template> 
+      <span (click)="toastService.remove(toast)"><i class="link fa fa-close" aria-hidden="true"></i></span></ng-template>
     </ngb-toast>
   `,
   styles: [
@@ -27,9 +27,11 @@ import { ToastService } from '../toast.service';
     '.toast-container { display: inline - block;}',
     'ngb-toasts {position: fixed;top: 54px !important;right: 0;margin: .5em;z-index: 1200;}'
   ],
-  host: { '[class.ngb-toasts]': 'true' }
+  // host: { '[class.ngb-toasts]': 'true' }
 })
 export class ToastComponent implements OnInit {
+
+  @HostBinding('class') classes = 'ngb-toasts';
 
   constructor(public toastService: ToastService) { }
 

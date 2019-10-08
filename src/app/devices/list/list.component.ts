@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DeviceService } from '../../core/services/device.service'
+import { DeviceService } from '../../core/services/device.service';
 
 @Component({
   selector: 'app-list',

@@ -1,12 +1,13 @@
 <ng-progress></ng-progress>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="">IoT Client App</a>
-  <div >
-      <span class="navbar-brand p-1" *ngIf="afAuth.authState | async as user">
-        <img class="rounded-circle" src="{{user.photoURL}}" width="30" height="30" alt="">
-      </span>
-      <button type="button" class="btn btn-outline-danger mr-2" *ngIf="afAuth.authState | async as user" (click)="auth.signOut()">Logout</button>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+  <div>
+    <span class="navbar-brand p-1" *ngIf="afAuth.authState | async as user">
+      <img class="rounded-circle" src="{{user.photoURL}}" width="30" height="30" alt="">
+    </span>
+    <button type="button" class="btn btn-outline-danger mr-2" *ngIf="afAuth.authState | async as user"
+      (click)="auth.signOut()">Logout</button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

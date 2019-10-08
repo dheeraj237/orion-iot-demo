@@ -35,7 +35,7 @@ export class AuthService {
           return of(null);
         }
       })
-    )
+    );
   }
 
   async googleSignIn() {
@@ -68,7 +68,7 @@ export class AuthService {
       displayName,
       photoURL
     };
-    console.log('data', data)
+    console.log('data', data);
     userRef.set(data, { merge: true });
     return this.router.navigate(['/home']);
   }
