@@ -1,14 +1,26 @@
-
 <div class="container mt-3">
-    <button class="btn" *ngFor="let device of devices">
-        <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title">deviceid : {{device.deviceid}}</h5>
-            <p class="card-text">LoadScale : {{device.loadscale}}</p>
-            <p class="card-text"><code>{{device | json}}</code></p>
-            <p class="card-text"><small class="text-muted">Last updated {{device.timestamp | timeago}}</small></p>
+    <!-- <div class="row">
+        <div class="col-12 col-md-4 col-sm-4">
+            <a class="btn btn-primary mr-3" routerLink="/discover" role="button">+ New Device</a>
         </div>
-    </div>
+        <div class="col-12 col-md-5 col-sm-5">
+            <a class="btn btn-primary mr-3" routerLink="/autoconnect-guide" role="button">Autoconnect Guide</a>
+        </div>
+    </div> -->
+    <span class="p-3">
+        <a class="btn btn-primary btn-block" routerLink="/discover" role="button">
+            + New Device
+        </a>
+    </span>
+    <button class="btn p-0 mt-2" *ngFor="let device of devices">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">deviceid : {{device.deviceid}}</h5>
+                <p class="card-text">LoadScale : {{device.loadscale}}</p>
+                <p class="card-text"><code>{{device | json}}</code></p>
+                <p class="card-text"><small class="text-muted">Last updated {{device.timestamp | timeago}}</small></p>
+            </div>
+        </div>
     </button>
 
 </div>

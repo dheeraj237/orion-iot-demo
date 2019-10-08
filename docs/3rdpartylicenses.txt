@@ -294,6 +294,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@ngx-progressbar/core
+MIT
+
+@ngx-progressbar/http
+MIT
+
+@ngx-progressbar/router
+MIT
+
 core-js
 MIT
 Copyright (c) 2014-2019 Denis Pushkarev
