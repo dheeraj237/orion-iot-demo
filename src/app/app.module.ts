@@ -27,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { TimeagoModule } from 'ngx-timeago';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { NgProgressRouterModule } from '@ngx-progressbar/router';
 
 @NgModule({
   declarations: [
@@ -50,9 +53,17 @@ import { TimeagoModule } from 'ngx-timeago';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
-    TimeagoModule.forRoot()
+    TimeagoModule.forRoot(),
+    NgProgressModule.withConfig({
+      spinner: false,
+      thick: true,
+      color: '#2780E3'
+    }),
+    NgProgressHttpModule,
+    NgProgressRouterModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
