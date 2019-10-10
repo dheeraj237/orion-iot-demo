@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DeviceService } from '../../core/services/device.service';
+import { DeviceService } from '../device.service';
 
 @Component({
   selector: 'app-list',
@@ -10,10 +10,28 @@ import { DeviceService } from '../../core/services/device.service';
 export class ListComponent implements OnInit {
 
   devices;
-  constructor(public deviceService: DeviceService) { }
+  loading: boolean = true;
+  constructor(public deviceService: DeviceService) {
+  }
 
   ngOnInit() {
-    this.deviceService.getDevices().subscribe(devices => this.devices = devices);
+    setTimeout(() => {
+      // this.deviceService.getDevices();
+      this.deviceService.getDevices().subscribe(devices => {
+        this.devices = devices;
+        this.loading = false;
+      });
+    }, 1000);
+    setInterval(() => {
+      // this.deviceService.getDevices();
+      this.deviceService.getDevices().subscribe(devices => {
+        this.devices = devices;
+      });
+    }, 5000);
+  }
+
+  ngOnDestroy() {
+
   }
 
 

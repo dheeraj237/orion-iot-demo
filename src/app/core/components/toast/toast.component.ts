@@ -23,9 +23,8 @@ import { ToastService } from '../toast.service';
   `,
   styles: [
     '.link { cursor: pointer; font-size: 15px; padding-left:10px; }',
-    '.toast-custom { top: 54px; }',
     '.toast-container { display: inline - block;}',
-    'ngb-toasts {position: fixed;top: 54px !important;right: 0;margin: .5em;z-index: 1200;}'
+    '/deep/ .ngb-toasts {position: fixed;top: 54px !important;right: 0;margin: .5em;z-index: 1200;}'
   ],
   // host: { '[class.ngb-toasts]': 'true' }
 })
