@@ -10,11 +10,12 @@ import { DeviceService } from '../device.service';
 export class ListComponent implements OnInit {
 
   devices;
-  loading: boolean = true;
+  loading;
   constructor(public deviceService: DeviceService) {
   }
 
   ngOnInit() {
+    this.loading = true;
     setTimeout(() => {
       // this.deviceService.getDevices();
       this.deviceService.getDevices().subscribe(devices => {
@@ -29,11 +30,5 @@ export class ListComponent implements OnInit {
       });
     }, 5000);
   }
-
-  ngOnDestroy() {
-
-  }
-
-
 
 }
