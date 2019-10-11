@@ -15,7 +15,7 @@ import { of, Observable } from 'rxjs';
 export class DeviceService {
 
   private RESOURCE_PATH = '/devices';
-  private SAMPLE_UID = '65432123456'
+  private SAMPLE_UID = '65432123456';
 
   constructor(
     private httpClient: HttpClient,
@@ -40,7 +40,7 @@ export class DeviceService {
     //   });
     return this.afAuth.authState.pipe(
       mergeMap((user: any) => {
-        return this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) })
+        return this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) });
       }));
     // const user = this.afAuth.authState.toPromise();
 
