@@ -26,8 +26,11 @@ export class DeviceService {
 
 
   public getDevices() {
-    let params = new HttpParams();
-    // this.afAuth.authState.pipe(mergeMap(user => this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) })));
+    const params = new HttpParams();
+    // this.afAuth.authState.pipe(
+    // mergeMap(user =>{
+    //  return this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) })
+    // }));
 
 
 
@@ -35,7 +38,10 @@ export class DeviceService {
     //     params = params.append('userid', user.uid);
     //     console.log('afAuth state user', user)
     //   });
-    return this.afAuth.authState.pipe(mergeMap((user: any) => this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) })))
+    return this.afAuth.authState.pipe(
+      mergeMap((user: any) => {
+        return this.httpClient.get(environment.apiendpoint + this.RESOURCE_PATH, { params: params.append('userid', user.uid) })
+      }));
     // const user = this.afAuth.authState.toPromise();
 
     // // params = params.append('userid', this.SAMPLE_UID);
